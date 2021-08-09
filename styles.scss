@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$base-color: #ffffff;
+$base-font: "Roboto", sans-serif;
+$primary: #2196F3;
+
+body {
+  font-family: $base-font;
+  height: 100vh;
+  background-size: cover;
+}
+
+@keyframes spinner {
+  0% { transform: rotateZ(0deg); }
+  100% { transform: rotateZ(359deg); }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 100%;
+  min-height: 10%;
+  padding: 20px;
+
+}
+
+.login {
+  
+  border-radius: 2px 2px 5px 5px;
+  padding: 10px 20px 20px 20px;
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  padding-bottom: 80px;
+
+  
+  &.loading {
+    button {
+      max-height: 100%;
+      padding-top: 50px;
+      .spinner {
+        opacity: 1;
+        top: 40%;
+      }
+    }  
+  }
+  
+  &.ok {
+    button {
+      background-color: #8bc34a;
+      .spinner{
+        border-radius: 0;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        height: 20px;
+        animation: none;
+        transform: rotateZ(-45deg);
+      }
+    }
+  }
+  
+  input {
+    display: block;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    width: 30%;
+    margin: 0px auto;
+    border: 1px solid #ddd;
+    transition: border-width 0.2s ease;
+    border-radius: 2px;
+    color: #ccc;
+    
+    &+ i.fa {
+      color: #fff;
+      font-size: 1em;
+      position: absolute;
+      margin-top: -47px;
+      opacity: 0;
+      left: 0;
+      transition: all 0.1s ease-in;
+    }
+    
+    &:focus {
+      &+ i.fa {
+        opacity: 1;
+        left: 30px;
+      transition: all 0.25s ease-out;
+      }
+      outline: none;
+      color: #444;
+      border-color: $primary;
+      border-left-width: 35px;
+    }
+    
+  }
+  
+  a {
+   font-size: 0.8em;   
+    color: $primary;
+    text-decoration: none;
+  }
+  
+  .title {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 2% 10%;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+  }
+  
+.subtitle{
+  color: #444;
+  font-size: 17px;
+  font-weight:600;
+  padding-bottom: 10px;
+}
+
+  button {
+    font-family: $base-font;
+    padding: 10px 100px;
+    background: $primary;
+    color: #fff;
+    display: block;
+    border: none;
+    border: 0px solid rgba(0,0,0,0.1);
+    border-radius: 0 0 2px 2px;
+    transform: rotateZ(0deg);
+    transition: all 0.1s ease-out;
+    border-bottom-width: 7px;
+    margin: 10px auto;
+    cursor: pointer;
+    margin-bottom: 25px;
+    margin-top: 20px;
+
+    .spinner {
+      display: block;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      border: 4px solid #ffffff;
+      border-top-color: rgba(255,255,255,0.3);
+      border-radius: 100%;
+      left: 50%;
+      top: 0;
+      opacity: 0;
+      margin-left: -20px;
+      margin-top: -20px;
+      animation: spinner 0.6s infinite linear;
+      transition: top 0.3s 0.3s ease,
+                opacity 0.3s 0.3s ease,
+                border-radius 0.3s ease;
+      box-shadow: 0px 1px 0px rgba(0,0,0,0.2);
+    }
+    
+  }
+  
+    &:not(.loading) button:hover {
+      box-shadow: 0px 1px 3px $primary;
+    }
+    &:not(.loading) button:focus {
+      border-bottom-width: 4px;
+    }
+    
+  
+}
+
+footer {
+  display: block;
+  padding-top: 50px;
+  text-align: center;
+  color: #ddd;
+  font-weight: normal;
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.2);
+  font-size: 0.8em;
+  a, a:link {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.banner__homeSura__Mobile{
+  width: 100%;
+  display: block;
+}
+
+.banner__homeSura__Desktop{
+  display: none;
+}
+
+.mensaje__final{
+  margin: 0px auto;
+  display: table;
+  
+}
+
+.mensaje__checkout{
+  margin: 0px auto;
+  display: table;
+  font-size: 14px;
+  font-weight:bold;
+  margin-top: 20px;
+}
+
+.mensaje__intentar{
+  margin: 0px auto;
+  display: table;
+  font-weight: 700;
+  
+}
+
+.info__importante{
+  font-weight: 700;
+}
+
+.info__importanteCupon{
+  font-weight: 900;
+  font-size: 22px;
+  color: #2196F3;
+}
+
+.boton__comprar {
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 320px;
+
+  a{
+    color: white;
+    background: #999;
+    padding: 1em 2.4em;
+    font-size: .9em;
+    margin: 1em;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .banner__homeSura__Mobile{
+    display: none;
+  }
+  
+  .banner__homeSura__Desktop{
+    width: 100%;
+    display: block;
+  }
+
+  .login .title{
+    margin: 0px auto;
+    display: table;
+  }
+
+  .mensaje__final{
+    margin: 0px auto;
+    display: table;
+  }
+
+  .mensaje__checkout{
+    margin: 0px auto;
+    display: table;
+    font-size: 14px;
+    font-weight:bold;
+    margin-top: 20px;
+  }
+
+  .mensaje__intentar{
+    margin: 0px auto;
+    display: table;
+    font-weight: 700;
+  }
+
+  .info__importante{
+    font-weight: 700;
+  }
+
+  .boton__comprar {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 320px;
+
+    a{
+      color: white;
+      background: #999;
+      padding: 1em 2.4em;
+      font-size: .9em;
+      margin: 1em;
+      text-decoration: none;
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+
+}

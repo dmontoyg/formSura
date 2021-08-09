@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  background-size: cover;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(359deg);
+            transform: rotateZ(359deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(359deg);
+            transform: rotateZ(359deg);
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 10%;
+  padding: 20px;
+}
+
+.login {
+  border-radius: 2px 2px 5px 5px;
+  padding: 10px 20px 20px 20px;
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  padding-bottom: 80px;
+}
+
+.login.loading button {
+  max-height: 100%;
+  padding-top: 50px;
+}
+
+.login.loading button .spinner {
+  opacity: 1;
+  top: 40%;
+}
+
+.login.ok button {
+  background-color: #8bc34a;
+}
+
+.login.ok button .spinner {
+  border-radius: 0;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  height: 20px;
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+.login input {
+  display: block;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  width: 30%;
+  margin: 0px auto;
+  border: 1px solid #ddd;
+  -webkit-transition: border-width 0.2s ease;
+  transition: border-width 0.2s ease;
+  border-radius: 2px;
+  color: #ccc;
+}
+
+.login input + i.fa {
+  color: #fff;
+  font-size: 1em;
+  position: absolute;
+  margin-top: -47px;
+  opacity: 0;
+  left: 0;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+
+.login input:focus {
+  outline: none;
+  color: #444;
+  border-color: #2196F3;
+  border-left-width: 35px;
+}
+
+.login input:focus + i.fa {
+  opacity: 1;
+  left: 30px;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+
+.login a {
+  font-size: 0.8em;
+  color: #2196F3;
+  text-decoration: none;
+}
+
+.login .title {
+  color: #444;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 2% 10%;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.login .subtitle {
+  color: #444;
+  font-size: 17px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.login button {
+  font-family: "Roboto", sans-serif;
+  padding: 10px 100px;
+  background: #2196F3;
+  color: #fff;
+  display: block;
+  border: none;
+  border: 0px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 2px 2px;
+  -webkit-transform: rotateZ(0deg);
+          transform: rotateZ(0deg);
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  border-bottom-width: 7px;
+  margin: 10px auto;
+  cursor: pointer;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+.login button .spinner {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border: 4px solid #ffffff;
+  border-top-color: rgba(255, 255, 255, 0.3);
+  border-radius: 100%;
+  left: 50%;
+  top: 0;
+  opacity: 0;
+  margin-left: -20px;
+  margin-top: -20px;
+  -webkit-animation: spinner 0.6s infinite linear;
+          animation: spinner 0.6s infinite linear;
+  -webkit-transition: top 0.3s 0.3s ease, opacity 0.3s 0.3s ease, border-radius 0.3s ease;
+  transition: top 0.3s 0.3s ease, opacity 0.3s 0.3s ease, border-radius 0.3s ease;
+  -webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.login:not(.loading) button:hover {
+  -webkit-box-shadow: 0px 1px 3px #2196F3;
+          box-shadow: 0px 1px 3px #2196F3;
+}
+
+.login:not(.loading) button:focus {
+  border-bottom-width: 4px;
+}
+
+footer {
+  display: block;
+  padding-top: 50px;
+  text-align: center;
+  color: #ddd;
+  font-weight: normal;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+  font-size: 0.8em;
+}
+
+footer a, footer a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.banner__homeSura__Mobile {
+  width: 100%;
+  display: block;
+}
+
+.banner__homeSura__Desktop {
+  display: none;
+}
+
+.mensaje__final {
+  margin: 0px auto;
+  display: table;
+}
+
+.mensaje__checkout {
+  margin: 0px auto;
+  display: table;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.mensaje__intentar {
+  margin: 0px auto;
+  display: table;
+  font-weight: 700;
+}
+
+.info__importante {
+  font-weight: 700;
+}
+
+.info__importanteCupon {
+  font-weight: 900;
+  font-size: 22px;
+  color: #2196F3;
+}
+
+.boton__comprar {
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 320px;
+}
+
+.boton__comprar a {
+  color: white;
+  background: #999;
+  padding: 1em 2.4em;
+  font-size: .9em;
+  margin: 1em;
+  text-decoration: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .banner__homeSura__Mobile {
+    display: none;
+  }
+  .banner__homeSura__Desktop {
+    width: 100%;
+    display: block;
+  }
+  .login .title {
+    margin: 0px auto;
+    display: table;
+  }
+  .mensaje__final {
+    margin: 0px auto;
+    display: table;
+  }
+  .mensaje__checkout {
+    margin: 0px auto;
+    display: table;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  .mensaje__intentar {
+    margin: 0px auto;
+    display: table;
+    font-weight: 700;
+  }
+  .info__importante {
+    font-weight: 700;
+  }
+  .boton__comprar {
+    margin: 10px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 320px;
+  }
+  .boton__comprar a {
+    color: white;
+    background: #999;
+    padding: 1em 2.4em;
+    font-size: .9em;
+    margin: 1em;
+    text-decoration: none;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
