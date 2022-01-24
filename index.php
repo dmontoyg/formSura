@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<img class="banner__homeSura__Desktop" src="img/BANNER-DESKTOP2-SURA-DESCUENTO-CONVENIO.jpg" alt="Promo Sura";">
-<img class="banner__homeSura__Mobile" src="img/BANNER-MOBILE2-SURA-DESCUENTO-CONVENIO.jpg" alt="Promo Sura";">
+<img class="banner__homeSura__Desktop" src="img/BANNER-INTERNO-DESKTOP-SURA-DESCUENTO-CONVENIO-ene2022.jpg" alt="Promo Sura";">
+<img class="banner__homeSura__Mobile" src="img/BANNER-INTERNO-MOBILE-SURA-DESCUENTO-CONVENIO-ene2022.jpg" alt="Promo Sura";">
 <div class="wrapper">
   <form action="index.php" method="post" class="login">
     <p class="title">Consulta aquí tu documento de identidad, para la alianza SURA y Medipiel</p>
@@ -35,7 +35,7 @@
                 echo "<div class='mensaje__final'>el cliente con documento: <span class='info__importante'>$var</span> fue encontrado exitosamente</div>";
                 echo "<div class='mensaje__final'>tiene el código: <span class='info__importanteCupon'>SURAMEDIPIEL</span></div>";
                 echo "<div class='mensaje__checkout'>Recuerda ingresarlo al final, en el checkout</div>";
-                echo "<div class='boton__comprar' ><a target='_blank' href='https://www.medipiel.com.co/522?map=productClusterIds'>Ir a comprar</a></div>";
+                echo "<div class='boton__comprar' ><a target='_blank' href='https://www.medipiel.com.co/858?map=productClusterIds'>Ir a comprar</a></div>";
                 echo "<img class='banner__homeSura__Desktop' src='img/BANNER-CUPON-SURA-DESKTOP.jpg' alt='Promo Sura'>";
                 echo "<img class='banner__homeSura__Mobile' src='img/BANNER-CUPON-SURA-MOBILE.jpg' alt='Promo Sura'>";
                 //echo "Sí está:".substr($pasar,9,8);
@@ -49,7 +49,7 @@
                       if ($linea2==$var2) {
                         echo "<div class='mensaje__final'>el cliente con documento: <span class='info__importante'>$var2</span> fue encontrado exitosamente</div>";
                         echo "<div class='mensaje__final'>tiene el código: <span class='info__importante'>SURAMEDIPIEL</span></div>";
-                        echo "<div class='boton__comprar'><a target='_blank' href='https://www.medipiel.com.co/522?map=productClusterIds'>Ir a comprar</a></div>";
+                        echo "<div class='boton__comprar'><a target='_blank' href='https://www.medipiel.com.co/858?map=productClusterIds'>Ir a comprar</a></div>";
                         echo "<img class='banner__homeSura__Desktop' src='img/BANNER-CUPON-SURA-DESKTOP.jpg' alt='Promo Sura'>";
                         echo "<img class='banner__homeSura__Mobile' src='img/BANNER-CUPON-SURA-MOBILE.jpg' alt='Promo Sura'>";
                         //echo "Sí está:".substr($pasar,9,8);
@@ -63,7 +63,7 @@
                               if ($linea3==$var3) {
                                 echo "<div class='mensaje__final'>el cliente con documento: <span class='info__importante'>$var3</span> fue encontrado exitosamente</div>";
                                 echo "<div class='mensaje__final'>tiene el código: <span class='info__importante'>SURAMEDIPIEL</span></div>";
-                                echo "<div class='boton__comprar'><a target='_blank' href='https://www.medipiel.com.co/522?map=productClusterIds'>Ir a comprar</a></div>";
+                                echo "<div class='boton__comprar'><a target='_blank' href='https://www.medipiel.com.co/858?map=productClusterIds'>Ir a comprar</a></div>";
                                 echo "<img class='banner__homeSura__Desktop' src='img/BANNER-CUPON-SURA-DESKTOP.jpg' alt='Promo Sura'>";
                                 echo "<img class='banner__homeSura__Mobile' src='img/BANNER-CUPON-SURA-MOBILE.jpg' alt='Promo Sura'>";
                                 //echo "Sí está:".substr($pasar,9,8);
